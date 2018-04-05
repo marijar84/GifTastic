@@ -57,7 +57,7 @@ function createButton(animalType) {
 }
 
 function getData(animalType) {
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animalType + "&api_key=0BQFGRWa66lLlfSA1tYVMRU1JbWey7GX&limit=10";//&rating=g";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalType + "&api_key=0BQFGRWa66lLlfSA1tYVMRU1JbWey7GX&limit=10";//&rating=g";
 
     $.ajax({
         url: queryURL,
