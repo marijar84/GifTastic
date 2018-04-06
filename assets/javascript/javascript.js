@@ -105,14 +105,13 @@ function getGifs(queryURL) {
             image.addClass("clickImage");
             image.addClass("img-fluid");
 
-
             var download = $("<a>");
             download.text("Download gif");
             download.download = "image.gif";
             download.addClass("clickDownload");
             download.attr("target", "blank");
-            download.attr("urlMoving", data[item].images.fixed_height.url);
-            download.attr("href", data[item].images.fixed_height.url);
+            download.attr("urlMoving", data[item].images.fixed_height.url);            
+            download.attr("href", data[item].images.fixed_height.url);            
 
             column.append(title);
             column.append(rating);            
