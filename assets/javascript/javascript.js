@@ -89,9 +89,11 @@ function getGifs(queryURL) {
             countColumns++;
 
             var title = $("<h3>");
+            title.addClass("title");
             title.text(data[item].title);
 
             var rating = $("<h3>");
+            rating.addClass("title");
             rating.text("Rating: " + data[item].rating);
 
             var image = $("<img>");
@@ -139,12 +141,15 @@ function getMovies(queryUrl) {
         column.addClass("col-md-12");
 
         var title = $("<h2>");
+        title.addClass("title");
         title.text(response.Title);
 
         var genre = $("<h3>");
+        genre.addClass("title");
         genre.text(response.Genre);
 
         var type = $("<h3>");
+        type.addClass("title");
         type.text(response.Type);
 
         var image = $("<img>");

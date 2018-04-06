@@ -1,7 +1,6 @@
 
 html,body{
     background-image: url('../../assets/images/memphis-colorful.png');
-    font-family: 'Shadows Into Light', cursive; 
     font-family: 'Jua', sans-serif;   
 }
 
@@ -32,6 +31,6 @@ img{
     display: block;
 }
 
-h1,h2,h3{
+.title{
     font-family: 'Jua', sans-serif;
 }
