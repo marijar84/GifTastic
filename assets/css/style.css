@@ -2,7 +2,7 @@
 html,body{
     background-image: url('../../assets/images/memphis-colorful.png');
     font-family: 'Shadows Into Light', cursive;   
-    text-align: center;
+    text-align: center;   
 }
 
 #name{
@@ -21,4 +21,9 @@ html,body{
 #movieDiv{
     align-content: center;
     text-align: center;
+}
+
+img{
+    text-align: center;
+    align-content: center;
 }

@@ -149,7 +149,7 @@ function getMovies(queryUrl) {
 
         var image = $("<img>");
         image.attr("src", response.Poster);
-        image.addClass("thumbnail");
+        //image.addClass("thumbnail");
 
         column.append(title);
         column.append(genre);
