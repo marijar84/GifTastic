@@ -1,3 +1,10 @@
+
+html,body{
+    background-image: url('../../assets/images/memphis-colorful.png');
+    font-family: 'Shadows Into Light', cursive;   
+    text-align: center;
+}
+
 #name{
     font-size: 30px;
 }
@@ -8,4 +15,10 @@
 
 #buttonAnimal{
     padding: 10px;
+    text-align: center;
+}
+
+#movieDiv{
+    align-content: center;
+    text-align: center;
 }
