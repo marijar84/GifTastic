@@ -1,7 +1,7 @@
 
 var topics = ["Dragon Ball", "The Simpsons", "The Flintstones",
- "Tom and Jerry", "Family Guy", "Rugrats", "Scooby Doo",
-"Futurama", "Avatar", "Batman", "South Park", "Pokemon"];
+    "Tom and Jerry", "Family Guy", "Rugrats", "Scooby Doo",
+    "Futurama", "Avatar", "Batman", "South Park", "Pokemon"];
 
 function drawTopics() {
     for (var item = 0; item < topics.length; item++) {
@@ -69,7 +69,6 @@ function getGifs(queryURL) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
 
         var data = response.data;
         var countRow = 0;
@@ -89,19 +88,20 @@ function getGifs(queryURL) {
             column.addClass("col-md-4");
             countColumns++;
 
-            var title = $("<h2>");
-            title.text("Title: " + data[item].title);
+            var title = $("<h3>");
+            title.text(data[item].title);
 
             var rating = $("<h3>");
             rating.text("Rating: " + data[item].rating);
 
             var image = $("<img>");
+            image.attr("id","gifImage");
             image.attr("src", data[item].images.fixed_height_still.url);
             image.attr("status", "still");
             image.attr("urlStill", data[item].images.fixed_height_still.url);
             image.attr("urlMoving", data[item].images.fixed_height.url);
             image.addClass("clickImage");
-            image.addClass("thumbnail");
+            image.addClass("img-fluid");
 
 
             var download = $("<a>");
@@ -113,9 +113,9 @@ function getGifs(queryURL) {
             download.attr("href", data[item].images.fixed_height.url);
 
             column.append(title);
-            column.append(rating);
-            column.append(image);
-            column.append(download);
+            column.append(rating);            
+            column.append(image); 
+            column.append(download);          
 
             row.append(column);
 
@@ -129,7 +129,6 @@ function getMovies(queryUrl) {
         url: queryUrl,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
 
         var data = response.data;
 
@@ -140,19 +139,20 @@ function getMovies(queryUrl) {
         column.addClass("col-md-12");
 
         var title = $("<h2>");
-        console.log(response.Title);
         title.text(response.Title);
 
         var genre = $("<h3>");
-        console.log(response.Genre);
         genre.text(response.Genre);
+
+        var type = $("<h3>");
+        type.text(response.Type);
 
         var image = $("<img>");
         image.attr("src", response.Poster);
-        //image.addClass("thumbnail");
 
         column.append(title);
         column.append(genre);
+        column.append(type);
         column.append(image);
 
         row.append(column);
@@ -163,8 +163,7 @@ function getMovies(queryUrl) {
 
 function getData(query) {
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=0BQFGRWa66lLlfSA1tYVMRU1JbWey7GX&limit=10";
-
-    console.log(queryURL);
+    
     getGifs(queryURL);
 
     var queryMovie = "https://www.omdbapi.com/?t=" + query + "&apikey=eafa5113";

@@ -1,8 +1,8 @@
 
 html,body{
     background-image: url('../../assets/images/memphis-colorful.png');
-    font-family: 'Shadows Into Light', cursive;   
-    text-align: center;   
+    font-family: 'Shadows Into Light', cursive; 
+    font-family: 'Jua', sans-serif;   
 }
 
 #name{
@@ -26,4 +26,12 @@ html,body{
 img{
     text-align: center;
     align-content: center;
+}
+
+#gifImage{
+    display: block;
+}
+
+h1,h2,h3{
+    font-family: 'Jua', sans-serif;
 }
